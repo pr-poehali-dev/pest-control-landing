@@ -1,6 +1,6 @@
 {
   "tests": [{
-    "name": "Send WhatsApp message",
+    "name": "Send Telegram message",
     "method": "POST",
     "body": {
       "name": "Иван Иванов",
