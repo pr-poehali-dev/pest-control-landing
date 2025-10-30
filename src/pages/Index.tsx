@@ -93,9 +93,9 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Наши услуги</h2>
-            <p className="text-xl text-muted-foreground">Комплексная защита вашего дома</p>
+            <p className="text-xl text-muted-foreground">Комплексная защита вашего дома и бизнеса</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: 'Bug',
@@ -114,6 +114,12 @@ const Index = () => {
                 title: 'Уничтожение муравьев',
                 description: 'Полное уничтожение колоний муравьев. Находим и ликвидируем гнезда.',
                 features: ['Быстрый эффект', 'Долгосрочная защита', 'Экологично']
+              },
+              {
+                icon: 'Building2',
+                title: 'Санитарная обработка для организаций',
+                description: 'Профессиональная дезинфекция офисов, складов, ресторанов, магазинов. Договор и документы.',
+                features: ['Работа по договору', 'Акты выполненных работ', 'Обработка вне рабочего времени']
               }
             ].map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow animate-fade-in">
