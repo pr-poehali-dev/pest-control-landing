@@ -16,6 +16,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const whatsappNumber = '79093627125';
+    const message = `🆕 Новая заявка на обработку\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n📍 Адрес: ${formData.address}${formData.message ? `\n💬 Комментарий: ${formData.message}` : ''}`;
+    
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
     toast.success('Спасибо! Мы свяжемся с вами в течение 15 минут');
     setFormData({ name: '', phone: '', address: '', message: '' });
   };

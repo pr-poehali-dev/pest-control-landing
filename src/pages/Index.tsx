@@ -8,6 +8,7 @@ import GuaranteesSection from '@/components/GuaranteesSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -26,6 +27,7 @@ const Index = () => {
       <ReviewsSection />
       <ContactSection />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
