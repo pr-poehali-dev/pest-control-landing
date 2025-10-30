@@ -1,0 +1,18 @@
+{
+  "tests": [{
+    "name": "Send WhatsApp message",
+    "method": "POST",
+    "body": {
+      "name": "Иван Иванов",
+      "phone": "+7 (999) 123-45-67",
+      "address": "Москва, ул. Тестовая, д. 1",
+      "message": "Нужна обработка от тараканов"
+    },
+    "expectedStatus": 200,
+    "expectedBody": {
+      "success": true,
+      "message": "string"
+    },
+    "bodyMatcher": "partial"
+  }]
+}

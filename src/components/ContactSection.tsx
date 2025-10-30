@@ -13,19 +13,32 @@ const ContactSection = () => {
     address: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    const whatsappNumber = '79093627125';
-    const message = `🆕 Новая заявка на обработку\n\n👤 Имя: ${formData.name}\n📞 Телефон: ${formData.phone}\n📍 Адрес: ${formData.address}${formData.message ? `\n💬 Комментарий: ${formData.message}` : ''}`;
-    
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
-    
-    window.location.href = whatsappUrl;
-    
-    toast.success('Спасибо! Мы свяжемся с вами в течение 15 минут');
-    setFormData({ name: '', phone: '', address: '', message: '' });
+    try {
+      const response = await fetch('https://functions.poehali.dev/adfaec9b-1456-492b-9ccb-acaea77e6486', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        toast.success('Спасибо! Мы свяжемся с вами в течение 15 минут');
+        setFormData({ name: '', phone: '', address: '', message: '' });
+      } else {
+        toast.error('Произошла ошибка. Попробуйте позже');
+      }
+    } catch (error) {
+      toast.error('Произошла ошибка. Попробуйте позже');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,8 +97,8 @@ const ContactSection = () => {
                       rows={4}
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    Отправить заявку
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                     <Icon name="Send" size={20} className="ml-2" />
                   </Button>
                 </form>
