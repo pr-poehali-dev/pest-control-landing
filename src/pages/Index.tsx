@@ -211,6 +211,29 @@ const Index = () => {
               </Button>
             </div>
           </div>
+          
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-foreground text-center mb-8">Мы работаем с</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+              {[
+                { icon: 'Utensils', name: 'Рестораны' },
+                { icon: 'Coffee', name: 'Кафе' },
+                { icon: 'Building', name: 'Отели' },
+                { icon: 'Warehouse', name: 'Склады' },
+                { icon: 'Store', name: 'Магазины' },
+                { icon: 'Briefcase', name: 'Офисы' },
+                { icon: 'Home', name: 'ЖК' },
+                { icon: 'School', name: 'Учреждения' }
+              ].map((item, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto rounded-xl bg-white shadow-md flex items-center justify-center mb-3 hover:scale-110 transition-transform">
+                    <Icon name={item.icon as any} size={28} className="text-primary" />
+                  </div>
+                  <p className="text-sm font-medium text-foreground">{item.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
