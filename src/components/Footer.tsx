@@ -19,11 +19,11 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-2">
                 <Icon name="Phone" size={20} />
-                <a href="tel:+79999999999" className="hover:text-primary transition-colors">+7 (999) 999-99-99</a>
+                <a href="tel:+79093627125" className="hover:text-primary transition-colors">+7 (909) 362-71-25</a>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="Mail" size={20} />
-                <a href="mailto:info@ekodez.ru" className="hover:text-primary transition-colors">info@ekodez.ru</a>
+                <a href="mailto:zakaz@eco-dez.online" className="hover:text-primary transition-colors">zakaz@eco-dez.online</a>
               </div>
               <div className="flex items-center gap-2">
                 <Icon name="MapPin" size={20} />

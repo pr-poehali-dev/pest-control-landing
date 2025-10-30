@@ -19,9 +19,9 @@ const Header = ({ scrollToSection }: HeaderProps) => {
           <button onClick={() => scrollToSection('reviews')} className="text-foreground hover:text-primary transition-colors">Отзывы</button>
           <button onClick={() => scrollToSection('contacts')} className="text-foreground hover:text-primary transition-colors">Контакты</button>
         </nav>
-        <a href="tel:+79999999999" className="flex items-center gap-2 text-foreground font-semibold hover:text-primary transition-colors">
+        <a href="tel:+79093627125" className="flex items-center gap-2 text-foreground font-semibold hover:text-primary transition-colors">
           <Icon name="Phone" size={20} />
-          <span className="hidden lg:inline">+7 (999) 999-99-99</span>
+          <span className="hidden lg:inline">+7 (909) 362-71-25</span>
         </a>
       </div>
     </header>
