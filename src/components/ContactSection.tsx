@@ -31,8 +31,8 @@ const ContactSection = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <img 
-                src="https://cdn.poehali.dev/projects/285ef045-2680-448d-9785-021710daa341/files/f88bb0b2-803b-47dc-8350-5b94e1c53e84.jpg"
-                alt="Счастливая семья"
+                src="https://cdn.poehali.dev/projects/285ef045-2680-448d-9785-021710daa341/files/6faa3342-a43a-4117-a0cf-be807a972ad6.jpg"
+                alt="Счастливая семья с детьми и питомцами"
                 className="rounded-2xl shadow-lg w-full h-full object-cover"
               />
             </div>
